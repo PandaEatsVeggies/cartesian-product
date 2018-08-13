@@ -6,7 +6,8 @@ class CartesianProduct:
         for i in args:
             self.sets.append(i)
             self.counters.append(1)
-        self.counters[0] = 0
+        if args:
+            self.counters[0] = 0
 
     def cascade_counters_incrementation(self, n):
         if n >= len(self.counters):
